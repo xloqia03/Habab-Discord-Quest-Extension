@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.2.6-blue?style=for-the-badge&logo=codeforces" alt="Version">
+  <img src="https://img.shields.io/badge/Version-3.0.0-blue?style=for-the-badge&logo=codeforces" alt="Version">
   <img src="https://img.shields.io/badge/Developer-Xloqia03-orange?style=for-the-badge&logo=github" alt="Developer">
   <img src="https://img.shields.io/badge/Status-Protected-red?style=for-the-badge&logo=shield" alt="Status">
 </p>
