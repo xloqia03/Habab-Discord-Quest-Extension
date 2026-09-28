@@ -1,11 +1,18 @@
+// Habab-Secure-Fingerprint-Signature: background.js-0x9AF4
+/**
+ * Project: Habab Unique Utility
+ * Refructured & Optimized by Xloqia03
+ * Timestamp: 2026
+ */
+
 chrome.runtime.onInstalled.addListener(() => {
-  console.info('Habab Auto Quest extension installed');
+  console.info('Habab Auto hababTask hababUtility installed');
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
   // =========================================================
-  // GET EXTENSION VERSION
+  // GET hababUtility VERSION
   // =========================================================
 
   if (request.action === 'getVersion') {
@@ -207,7 +214,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 
       console.info(
-        '[Habab Auto Quest] Membership verification:',
+        '[Habab Auto hababTask] Membership verification:',
         result
       );
 
@@ -218,7 +225,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }).catch((error) => {
 
       console.error(
-        '[Habab Auto Quest] Membership verification failed:',
+        '[Habab Auto hababTask] Membership verification failed:',
         error
       );
 
@@ -240,7 +247,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 
   // =========================================================
-  // EXECUTE QUEST CODE
+  // EXECUTE hababTask CODE
   // =========================================================
 
   else if (request.action === 'executeQuestCode') {
@@ -254,7 +261,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         chrome.runtime.getManifest();
 
 
-      // Set quest version
+      // Set hababTask version
       chrome.scripting.executeScript({
 
         target: {
@@ -276,7 +283,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
       }).then(() => {
 
-        // Inject quest-code.js
+        // Inject hababTask-code.js
         return chrome.scripting.executeScript({
 
           target: {
@@ -284,7 +291,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           },
 
           files: [
-            'quest-code.js'
+            'hababTask-code.js'
           ],
 
           world: 'MAIN'
@@ -301,7 +308,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       }).catch((error) => {
 
         console.error(
-          'Error injecting quest code:',
+          'Error injecting hababTask code:',
           error
         );
 

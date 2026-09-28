@@ -1,3 +1,10 @@
+// Habab-Secure-Fingerprint-Signature: quest-home.js-0x9AF4
+/**
+ * Project: Habab Unique Utility
+ * Refructured & Optimized by Xloqia03
+ * Timestamp: 2026
+ */
+
 (function() {
   'use strict';
 
@@ -99,12 +106,12 @@
 
 
   // =========================================================
-  // CREATE MAIN QUEST BUTTON
+  // CREATE MAIN hababTask BUTTON
   // =========================================================
 
   function createQuestButton() {
 
-    if (!window.location.pathname.includes('/quest-home')) {
+    if (!window.location.pathname.includes('/hababTask-home')) {
       removeElements();
       return;
     }
@@ -120,13 +127,13 @@
     button.style.cssText = STYLES.button;
 
 
-    // Quest icon
+    // hababTask icon
     const icon = document.createElement('img');
 
     icon.src =
       'https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d8014ea898f3a4b2156c_Symbol.svg';
 
-    icon.alt = 'Quest Icon';
+    icon.alt = 'hababTask Icon';
     icon.style.cssText = STYLES.icon;
 
     button.appendChild(icon);
@@ -283,7 +290,7 @@
         margin-bottom: 16px;
       ">
         You must join the Habab Agency Discord server
-        before using Auto Quest.
+        before using Auto hababTask.
       </div>
 
       <div style="
@@ -468,7 +475,7 @@
         } catch (error) {
 
           console.error(
-            '[Habab Auto Quest] Verification error:',
+            '[Habab Auto hababTask] Verification error:',
             error
           );
 
@@ -509,7 +516,7 @@
       ) {
 
         console.error(
-          '[Habab Auto Quest] Chrome runtime unavailable'
+          '[Habab Auto hababTask] Chrome runtime unavailable'
         );
 
         resolve(false);
@@ -528,7 +535,7 @@
           if (chrome.runtime.lastError) {
 
             console.error(
-              '[Habab Auto Quest] Verification error:',
+              '[Habab Auto hababTask] Verification error:',
               chrome.runtime.lastError
             );
 
@@ -541,7 +548,7 @@
           if (!response) {
 
             console.error(
-              '[Habab Auto Quest] Empty verification response'
+              '[Habab Auto hababTask] Empty verification response'
             );
 
             resolve(false);
@@ -553,7 +560,7 @@
           if (!response.success) {
 
             console.error(
-              '[Habab Auto Quest] Verification failed:',
+              '[Habab Auto hababTask] Verification failed:',
               response.error
             );
 
@@ -575,7 +582,7 @@
 
 
   // =========================================================
-  // ORIGINAL QUEST EXECUTION
+  // ORIGINAL hababTask EXECUTION
   // =========================================================
 
   function handleButtonClick(
@@ -601,7 +608,7 @@
       updateButtonState(
         elements,
         {
-          message: 'Extension Error',
+          message: 'hababUtility Error',
           bgColor: '#ff4444',
           textColor: 'white',
           invertIcons: true
@@ -622,7 +629,7 @@
         if (chrome.runtime.lastError) {
 
           console.error(
-            'Discord Auto Quest Error:',
+            'Discord Auto hababTask Error:',
             chrome.runtime.lastError
           );
 
@@ -746,7 +753,7 @@
 
 
   // =========================================================
-  // EXPANDED QUEST PANEL
+  // EXPANDED hababTask PANEL
   // =========================================================
 
   function createExpandedPanel() {
@@ -787,11 +794,11 @@
     if (questStateCache.size > 0) {
 
       questStateCache.forEach(
-        quest => {
+        hababTask => {
 
           updateQuestItemUI(
             questListContainer,
-            quest
+            hababTask
           );
 
         }
@@ -810,7 +817,7 @@
 
 
     title.textContent =
-      ' Habab Discord ID | Auto Quest';
+      ' Habab Discord ID | Auto hababTask';
 
 
     title.style.cssText =
@@ -829,7 +836,7 @@
 
 
     credit.innerHTML =
-      'Credits by <a href="https://github.com/xloqia03/Habab-Discord-Quest-Extension" target="_blank" rel="noopener noreferrer" style="color: #fff; font-weight: bold; text-decoration: none;">xloqia03</a>';
+      'Credits by <a href="https://github.com/xloqia03/Habab-Discord-hababTask-hababUtility" target="_blank" rel="noopener noreferrer" style="color: #fff; font-weight: bold; text-decoration: none;">xloqia03</a>';
 
 
     panel.appendChild(credit);
@@ -840,7 +847,7 @@
 
 
   // =========================================================
-  // QUEST MESSAGE LISTENER
+  // hababTask MESSAGE LISTENER
   // =========================================================
 
   window.addEventListener(
@@ -923,17 +930,17 @@
 
 
   // =========================================================
-  // QUEST UI ITEM
+  // hababTask UI ITEM
   // =========================================================
 
   function updateQuestItemUI(
     container,
-    quest
+    hababTask
   ) {
 
     let item =
       document.getElementById(
-        `quest-item-${quest.id}`
+        `hababTask-item-${hababTask.id}`
       );
 
 
@@ -944,7 +951,7 @@
 
 
       item.id =
-        `quest-item-${quest.id}`;
+        `hababTask-item-${hababTask.id}`;
 
 
       item.style.cssText =
@@ -954,13 +961,13 @@
       item.innerHTML = `
         <span
           style="${STYLES.questName}"
-          title="${quest.name}"
+          title="${hababTask.name}"
         >
-          ${quest.name}
+          ${hababTask.name}
         </span>
 
         <span
-          id="quest-progress-${quest.id}"
+          id="hababTask-progress-${hababTask.id}"
           style="${STYLES.questProgress}"
         ></span>
       `;
@@ -972,26 +979,26 @@
 
     const progressSpan =
       item.querySelector(
-        `#quest-progress-${quest.id}`
+        `#hababTask-progress-${hababTask.id}`
       );
 
 
     if (progressSpan) {
 
       progressSpan.textContent =
-        quest.completed
+        hababTask.completed
           ? 'DONE'
-          : `${quest.progress}/${quest.target}`;
+          : `${hababTask.progress}/${hababTask.target}`;
 
 
       progressSpan.style.color =
-        quest.completed
+        hababTask.completed
           ? '#43b581'
           : '#aaa';
 
 
       item.style.opacity =
-        quest.completed
+        hababTask.completed
           ? '0.5'
           : '1';
     }
@@ -1039,7 +1046,7 @@
 
 
   // =========================================================
-  // TOGGLE QUEST PANEL
+  // TOGGLE hababTask PANEL
   // =========================================================
 
   function togglePanel() {

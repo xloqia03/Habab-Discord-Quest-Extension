@@ -1,3 +1,10 @@
+// Habab-Secure-Fingerprint-Signature: user-agent-override.js-0x9AF4
+/**
+ * Project: Habab Unique Utility
+ * Refructured & Optimized by Xloqia03
+ * Timestamp: 2026
+ */
+
 (function() {
   'use strict';
 
@@ -18,8 +25,8 @@
       configurable: true
     });
 
-    console.info('[Habab Discord Auto Quest] User-Agent override active:', electronUserAgent);
+    console.info('[Habab Discord Auto hababTask] User-Agent override active:', electronUserAgent);
   } catch (error) {
-    console.error('[Habab Discord Auto Quest] Failed to override user agent:', error);
+    console.error('[Habab Discord Auto hababTask] Failed to override user agent:', error);
   }
 })();
